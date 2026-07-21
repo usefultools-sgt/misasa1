@@ -154,7 +154,7 @@
 <a class="hidden md:flex bg-primary text-on-primary px-6 py-2 text-label-sm font-subheading hover:bg-primary-container transition-colors items-center justify-center border border-primary" href="#contact">
                 お問合せ
             </a>
-<button class="material-symbols-outlined text-primary text-3xl md:hidden" onclick="document.getElementById('mobile-drawer').classList.remove('translate-x-full')">
+<button class="material-symbols-outlined text-primary text-3xl md:hidden" onclick="openMobileDrawer()">
                 menu
             </button>
 </div>
@@ -163,7 +163,7 @@
 <div class="fixed inset-0 z-[60] bg-surface-bright flex flex-col translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-drawer">
 <div class="flex justify-between items-center px-4 py-3 border-b border-outline-variant">
 <span class="font-display-lg text-headline-lg-mobile text-primary">LIFE PLUS</span>
-<button class="material-symbols-outlined text-primary text-3xl" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full')">
+<button class="material-symbols-outlined text-primary text-3xl" onclick="closeMobileDrawer()">
                 close
             </button>
 </div>
@@ -240,7 +240,7 @@
 <div class="w-12 h-12 border border-outline-variant rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-secondary-container group-hover:border-secondary-container transition-all">
 <span class="material-symbols-outlined text-primary">construction</span>
 </div>
-<h3 class="font-display-lg text-xl text-primary mb-4">機能性とデザイン性を兼ねたフルリノベ物件</h3>
+<h3 class="font-display-lg text-xl text-primary mb-4">機能性とデザイン性を兼ねたフルリノベ物件です。</h3>
 <div class="h-px w-8 bg-outline-variant mx-auto mb-6"></div>
 <p class="text-on-surface-variant text-label-sm leading-relaxed">
                         もともとの鉄筋コンクリート造の遮音性や安全性に加え、一度それぞれの部屋を解体しスケルトン状態からリノベしたため、機能的でデザイン性にも優れた水回り設備の新設や室内インテリアに一新。長く快適にお住まいいただける品質です。
@@ -533,7 +533,7 @@
 <tr class="border-b border-outline-variant/30"><th class="text-left font-normal py-4">■定休日</th><td class="py-4">日曜日・祝日・水曜日</td></tr>
 <tr class="border-b border-outline-variant/30"><th class="text-left font-normal py-4">■連絡先</th><td class="py-4">TEL: 082-225-7799 FAX: 082-225-6482</td></tr>
 <tr class="border-b border-outline-variant/30"><th class="text-left font-normal py-4">■事 業</th><td class="py-4">宅地建物取引業<br>老人施設紹介業 uchishirube-h.com</td></tr>
-<tr class="border-b border-outline-variant/30"><th class="text-left font-normal py-4">■グループ法人</th><td class="py-4">株式会社LIFE View tsubaki-f.com<br>行政書士法人ライフ h-life.jp</td></tr>
+<tr class="border-b border-outline-variant/30"><th class="text-left font-normal py-4">■グループ法人</th><td class="py-4">株式会社LIFE View tsubaki-f.com<br>行政書士法人ライフh-life.jp</td></tr>
 </tbody>
 </table>
 </div>
@@ -601,6 +601,14 @@
                 header.classList.remove('shadow-sm');
             }
         });
+
+        // モバイルドロワー（ハンバーガーメニュー）開閉制御
+        function openMobileDrawer() {
+            document.getElementById('mobile-drawer').classList.remove('translate-x-full');
+        }
+        function closeMobileDrawer() {
+            document.getElementById('mobile-drawer').classList.add('translate-x-full');
+        }
 
         // メインビジュアル自動スライドショー
         const slides = document.querySelectorAll('#hero-slider img');
@@ -681,10 +689,18 @@
             document.getElementById(id).classList.add('hidden');
         }
 
-        // 日付の動的自動生成および Intersection Observer
+        // DOMロード後の処理
         document.addEventListener('DOMContentLoaded', () => {
+            // モバイルメニュー内のリンクをクリックした際にドロワーを閉じる処理
+            const mobileLinks = document.querySelectorAll('#mobile-drawer a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    closeMobileDrawer();
+                });
+            });
+
+            // 日付の動的自動生成
             const today = new Date();
-            
             function formatDate(date) {
                 const y = date.getFullYear();
                 const m = date.getMonth() + 1;
