@@ -7,6 +7,21 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Montserrat:wght@400;500&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('D9G67V3C77U0255M8Q80');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -131,7 +146,7 @@
         }
     </style>
 </head>
-<body class="font-body-md text-on-background selection:bg-secondary-fixed selection:text-on-secondary-fixed" data-mode="connect">
+<body class="font-body-md text-on-background selection:bg-secondary-fixed selection:text-on-secondary-fixed pb-16 md:pb-0" data-mode="connect">
 
 <header class="fixed top-0 left-0 w-full z-50 header-glass border-b border-outline-variant flex justify-between items-center px-4 py-3 md:px-8">
 <div class="flex flex-col">
@@ -159,6 +174,22 @@
             </button>
 </div>
 </header>
+
+<!-- 追従CTAボタン (PC用: 画面右端固定) -->
+<div class="hidden md:block fixed right-0 top-1/2 -translate-y-1/2 z-40 shadow-2xl">
+<a href="#contact" class="flex flex-col items-center justify-center gap-3 bg-secondary-container text-on-secondary-container py-6 px-3.5 rounded-l-lg hover:opacity-95 transition-opacity border-l border-y border-secondary/30 group">
+<span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">mail</span>
+<span class="font-subheading text-xs font-bold tracking-widest [writing-mode:vertical-rl]">お問合せ・内見予約</span>
+</a>
+</div>
+
+<!-- 追従CTAボタン (スマホ用: 画面下部固定) -->
+<div class="fixed bottom-0 left-0 w-full p-3 bg-surface-bright/95 backdrop-blur border-t border-outline-variant/40 z-40 md:hidden shadow-lg">
+<a href="#contact" class="flex items-center justify-center gap-2 bg-secondary-container text-on-secondary-container font-subheading text-xs font-bold py-3.5 px-6 rounded shadow hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-base">mail</span>
+<span>お問合せ・内見予約はこちら</span>
+</a>
+</div>
 
 <div class="fixed inset-0 z-[60] bg-surface-bright flex flex-col translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-drawer">
 <div class="flex justify-between items-center px-4 py-3 border-b border-outline-variant">
@@ -533,7 +564,7 @@
 <tr class="border-b border-outline-variant/30"><th class="text-left font-normal py-4">■定休日</th><td class="py-4">日曜日・祝日・水曜日</td></tr>
 <tr class="border-b border-outline-variant/30"><th class="text-left font-normal py-4">■連絡先</th><td class="py-4">TEL: 082-225-7799 FAX: 082-225-6482</td></tr>
 <tr class="border-b border-outline-variant/30"><th class="text-left font-normal py-4">■事 業</th><td class="py-4">宅地建物取引業<br>老人施設紹介業 uchishirube-h.com</td></tr>
-<tr class="border-b border-outline-variant/30"><th class="text-left font-normal py-4">■グループ法人</th><td class="py-4">株式会社LIFE View tsubaki-f.com<br>行政書士法人ライフh-life.jp</td></tr>
+<tr class="border-b border-outline-variant/30"><th class="text-left font-normal py-4">■グループ法人</th><td class="py-4">株式会社LIFE View tsubaki-f.com<br>行政書士法人ライフ h-life.jp</td></tr>
 </tbody>
 </table>
 </div>
