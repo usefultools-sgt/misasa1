@@ -224,11 +224,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 
+<!-- メインビジュアル -->
 <section class="relative h-[884px] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0" id="hero-slider">
 <img src="1.png" alt="メインビジュアル1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
 <img src="2.png" alt="メインビジュアル2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
 <img src="3.png" alt="メインビジュアル3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+<img src="4.png" alt="ステージングお部屋イメージ" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
 <div class="absolute inset-0 image-overlay"></div>
 </div>
 <div class="relative z-10 text-center px-4 max-w-4xl">
@@ -329,7 +331,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </tr>
 </thead>
 <tbody class="font-body-md text-primary" id="rooms-table-body">
-<!-- JSにて資料に基づく各部屋データを動的出力 -->
+<!-- 初期表示データ（JS非作動時対策兼アコーディオン高さ確保） -->
+<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">401号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">12.8㎡</td><td class="py-6 px-2">42,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/401.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
+<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">402号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">14.4㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/402.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
+<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">404号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">13.7㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/404.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
+<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">405号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">13.7㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/405.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
+<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">501号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">14.4㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/501.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
+<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">502号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">16.6㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/502.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
+<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">503号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">13.7㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/503.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
+<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">504号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">14.2㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/504.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
+<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">505号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">12.8㎡</td><td class="py-6 px-2">42,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/505.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
 </tbody>
 </table>
 </div>
@@ -368,23 +379,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p class="text-on-surface-variant text-label-sm mt-4">毎日の暮らしを快適に支える、充実の設備をご用意しています。</p>
 </div>
 
-<div class="max-w-2xl mx-auto relative mb-20 group px-4 md:px-0">
+<div class="max-w-2xl mx-auto relative mb-6 group px-4 md:px-0">
 <div class="relative aspect-video overflow-hidden rounded border border-outline-variant/30 bg-white shadow-sm">
-<div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-100 z-10 flex flex-col">
-<img src="1.png" alt="居室" class="w-full flex-1 object-cover">
-<div class="bg-white p-4 text-center text-label-sm font-subheading border-t border-outline-variant/20 text-primary">居室</div>
+<div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-100 z-10">
+<img src="1.png" alt="居室" class="w-full h-full object-cover">
 </div>
-<div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0 flex flex-col">
-<img src="2.png" alt="キッチン" class="w-full flex-1 object-cover object-bottom">
-<div class="bg-white p-4 text-center text-label-sm font-subheading border-t border-outline-variant/20 text-primary">キッチン</div>
+<div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
+<img src="2.png" alt="キッチン" class="w-full h-full object-cover object-bottom">
 </div>
-<div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0 flex flex-col">
-<img src="3.png" alt="水回り" class="w-full flex-1 object-cover">
-<div class="bg-white p-4 text-center text-label-sm font-subheading border-t border-outline-variant/20 text-primary">水回り</div>
+<div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
+<img src="3.png" alt="水回り" class="w-full h-full object-cover">
 </div>
-<div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0 flex flex-col">
-<img src="flyer_image.png" alt="物件チラシ" class="w-full flex-1 object-contain bg-white">
-<div class="bg-white p-4 text-center text-label-sm font-subheading border-t border-outline-variant/20 text-primary">物件チラシ</div>
+<div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
+<img src="flyer_image.png" alt="物件チラシ" class="w-full h-full object-contain bg-white">
 </div>
 </div>
 
@@ -395,6 +402,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <span class="material-symbols-outlined">chevron_right</span>
 </button>
 </div>
+
+<!-- 注記テキストの追加 -->
+<p class="text-[11px] text-on-surface-variant text-center mb-20">※掲載の写真は実際の室内写真をもとに、生成AIで家具などを配置したイメージ画像です。</p>
 
 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
 <div>
@@ -532,13 +542,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </section>
 
+<!-- お問合せ（フッターCVエリア） -->
 <section class="section-padding bg-primary text-on-primary" id="contact">
 <div class="max-w-[800px] mx-auto px-4">
+
+<!-- 初期費用0円キャンペーンの目立つCVボタン -->
+<div class="text-center mb-10">
+<button onclick="openCampaignModal()" class="inline-flex items-center gap-3 bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-subheading text-xs md:text-sm font-bold py-4 px-8 rounded-full shadow-2xl transition-all transform hover:scale-105 border-2 border-secondary animate-pulse">
+<span class="material-symbols-outlined text-xl">campaign</span>
+<span>【期間限定】初期費用０円キャンペーン実施中！詳しくはこちら</span>
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+</div>
+
 <div class="text-center mb-12">
 <span class="font-subheading text-label-sm text-on-primary/60 tracking-[0.3em]">CONTACT</span>
 <h2 class="font-display-lg text-headline-lg text-on-primary mt-4">お気軽にお問合せください</h2>
 <p class="text-on-primary/80 text-label-sm mt-4">内見のご予約・資料請求・空室確認を承っております。</p>
 </div>
+
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
 <div class="bg-white/5 border border-white/10 text-center rounded flex flex-col justify-center p-8">
 <p class="text-label-sm text-on-primary/60 mb-2">お電話でのお問合せ</p>
@@ -582,18 +604,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </footer>
 
+<!-- 初期費用0円キャンペーン 10秒自動ポップアップモーダル（画面中央表示） -->
+<div id="campaign-modal" class="fixed inset-0 z-[120] hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+<div class="bg-white max-w-lg w-full relative rounded-2xl shadow-2xl overflow-hidden border border-secondary/30 transition-all duration-300 transform scale-100">
+<!-- 右上の閉じるボタン (×印) -->
+<button onclick="closeCampaignModal()" class="absolute top-3 right-3 z-20 w-9 h-9 bg-black/60 hover:bg-black/80 text-white rounded-full flex items-center justify-center shadow transition-colors" aria-label="閉じる">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+
+<!-- バナー画像エリア -->
+<div class="relative w-full">
+<img src="campaign_banner.png" alt="初期費用0円キャンペーン" class="w-full h-auto block" onerror="this.style.display='none'; document.getElementById('html-banner-fallback').style.display='block';">
+      
+      <!-- フォールバック（画像読み込み失敗時のHTMLデザインバナー） -->
+<div id="html-banner-fallback" style="display:none;" class="bg-gradient-to-r from-primary-container via-primary to-tertiary p-6 text-white text-center relative overflow-hidden">
+<span class="bg-secondary-container text-on-secondary-container text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-2">期間限定キャンペーン</span>
+<h3 class="font-display-lg text-2xl md:text-3xl text-secondary-fixed font-bold leading-tight">初期費用 0円！</h3>
+<p class="text-xs md:text-sm text-white/90 mt-1 font-subheading">新生活のお引越し費用を大幅削減</p>
+</div>
+</div>
+
+<!-- 一般借主向けキャンペーン詳細コンテンツ -->
+<div class="p-6 bg-surface-bright space-y-4">
+<p class="text-xs text-on-surface-variant text-center font-bold">
+        対象物件へのお申し込みで、お引越しにかかる下記の費用が<strong class="text-error text-sm font-bold underline">すべて0円</strong>に！
+      </p>
+      
+<div class="grid grid-cols-2 gap-2 text-xs font-bold text-primary">
+<div class="bg-surface-container p-3 rounded-lg border border-outline-variant/40 flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span> 敷金・礼金 0円
+        </div>
+<div class="bg-surface-container p-3 rounded-lg border border-outline-variant/40 flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span> 鍵交換費用 0円
+        </div>
+<div class="bg-surface-container p-3 rounded-lg border border-outline-variant/40 flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span> 初回保証料 0円
+        </div>
+<div class="bg-surface-container p-3 rounded-lg border border-outline-variant/40 flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span> 初回火災保険料 0円
+        </div>
+</div>
+
+<div class="text-[11px] text-on-surface-variant text-center bg-secondary-container/20 p-2.5 rounded-lg border border-secondary/30 font-bold">
+        ※キャンペーン適用期間：～26年10月末までにライフプラス三篠・ライフプラス三篠Ⅱのお部屋をご契約いただいた方
+      </div>
+
+<!-- ポップアップバナー下部の内見を促すCVボタン -->
+<div class="pt-2">
+<a href="#contact" onclick="closeCampaignModal()" class="block w-full bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-subheading font-bold text-sm py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all text-center flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">event_available</span>
+<span>キャンペーンを適用して内見予約をする</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+
 <script>
-        // 資料に基づいた正確な部屋一覧データ[cite: 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        // 各部屋データ配列（動的描写用）
         const roomsData = [
-            { room: '401', layout: '1R', area: '12.8㎡', rent: '42,000円 / 3,000円', status: '募集中', pdfPath: './pdf/401.pdf' },[cite: 13]
-            { room: '402', layout: '1R', area: '14.4㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/402.pdf' },[cite: 12]
-            { room: '404', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/404.pdf' },[cite: 11]
-            { room: '405', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/405.pdf' },[cite: 10]
-            { room: '501', layout: '1R', area: '14.4㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/501.pdf' },[cite: 9]
-            { room: '502', layout: '1R', area: '16.6㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/502.pdf' },[cite: 8]
-            { room: '503', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/503.pdf' },[cite: 7]
-            { room: '504', layout: '1R', area: '14.2㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/504.pdf' },[cite: 6]
-            { room: '505', layout: '1R', area: '12.8㎡', rent: '42,000円 / 3,000円', status: '募集中', pdfPath: './pdf/505.pdf' }[cite: 5]
+            { room: '401', layout: '1R', area: '12.8㎡', rent: '42,000円 / 3,000円', status: '募集中', pdfPath: './pdf/401.pdf' },
+            { room: '402', layout: '1R', area: '14.4㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/402.pdf' },
+            { room: '404', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/404.pdf' },
+            { room: '405', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/405.pdf' },
+            { room: '501', layout: '1R', area: '14.4㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/501.pdf' },
+            { room: '502', layout: '1R', area: '16.6㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/502.pdf' },
+            { room: '503', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/503.pdf' },
+            { room: '504', layout: '1R', area: '14.2㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/504.pdf' },
+            { room: '505', layout: '1R', area: '12.8㎡', rent: '42,000円 / 3,000円', status: '募集中', pdfPath: './pdf/505.pdf' }
         ];
 
         const header = document.querySelector('header');
@@ -613,10 +691,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             document.getElementById('mobile-drawer').classList.add('translate-x-full');
         }
 
-        // メインビジュアル自動スライドショー
+        // メインビジュアル自動スライドショー (4枚ローテーション)
         const slides = document.querySelectorAll('#hero-slider img');
         let currentSlide = 0;
         function nextSlide() {
+            if (slides.length === 0) return;
             slides[currentSlide].classList.remove('opacity-100');
             slides[currentSlide].classList.add('opacity-0');
             currentSlide = (currentSlide + 1) % slides.length;
@@ -625,12 +704,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         setInterval(nextSlide, 4000);
 
+        // 10秒後に自動ポップアップモーダルを表示
+        let campaignModalTimer = setTimeout(() => {
+            openCampaignModal();
+        }, 10000);
+
+        function openCampaignModal() {
+            const modal = document.getElementById('campaign-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function closeCampaignModal() {
+            const modal = document.getElementById('campaign-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+        }
+
         // 設備仕様スライダーの制御
         const eqSlides = document.querySelectorAll('.equipment-slide');
         let currentEqSlide = 0;
         let eqSliderInterval = setInterval(autoNextEquipmentSlide, 5000);
 
         function showEquipmentSlide(index) {
+            if (eqSlides.length === 0) return;
             eqSlides[currentEqSlide].classList.remove('opacity-100', 'z-10');
             eqSlides[currentEqSlide].classList.add('opacity-0', 'z-0');
             
@@ -662,16 +761,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         function toggleRoomsAccordion() {
             const accordion = document.getElementById('rooms-accordion');
             const arrow = document.getElementById('accordion-arrow');
-            const btn = document.getElementById('accordion-toggle-btn').querySelector('span:first-child');
+            const btnText = document.getElementById('accordion-toggle-btn').querySelector('span:first-child');
             
             if (accordion.style.maxHeight && accordion.style.maxHeight !== '0px') {
                 accordion.style.maxHeight = '0px';
                 arrow.classList.remove('rotate-180');
-                btn.innerText = '募集中の部屋一覧を見る';
+                btnText.innerText = '募集中の部屋一覧を見る';
             } else {
                 accordion.style.maxHeight = accordion.scrollHeight + 'px';
                 arrow.classList.add('rotate-180');
-                btn.innerText = '募集中の部屋一覧を閉じる';
+                btnText.innerText = '募集中の部屋一覧を閉じる';
             }
         }
 
