@@ -2,6 +2,13 @@
 <html class="scroll-smooth" lang="ja">
 <head>
 <meta charset="utf-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJLNQCMP');</script>
+<!-- End Google Tag Manager -->
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>LIFE PLUS | ていねいな日常を、ちょうどいい暮らしへ。</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -147,6 +154,10 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     </style>
 </head>
 <body class="font-body-md text-on-background selection:bg-secondary-fixed selection:text-on-secondary-fixed pb-16 md:pb-0" data-mode="connect">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJLNQCMP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <header class="fixed top-0 left-0 w-full z-50 header-glass border-b border-outline-variant flex justify-between items-center px-4 py-3 md:px-8">
 <div class="flex flex-col">
@@ -158,7 +169,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <ul class="flex items-center gap-x-6 lg:gap-x-8 text-label-sm font-subheading text-on-surface-variant">
 <li><a class="hover:text-primary transition-colors py-2" href="#concept">コンセプト</a></li>
 <li><a class="hover:text-primary transition-colors py-2" href="#rooms">募集状況</a></li>
-<li><a class="hover:text-primary transition-colors py-2" href="#gallery">ギャラリー</a></li>
 <li><a class="hover:text-primary transition-colors py-2" href="#equipment">設備・仕様</a></li>
 <li><a class="hover:text-primary transition-colors py-2" href="#access">周辺環境</a></li>
 <li><a class="hover:text-primary transition-colors py-2" href="#detail">物件概要</a></li>
@@ -202,7 +212,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <ul class="space-y-8">
 <li class=""><a class="font-subheading text-headline-lg-mobile text-on-surface-variant block" href="#concept">コンセプト</a></li>
 <li class=""><a class="font-subheading text-headline-lg-mobile text-on-surface-variant block" href="#rooms">お部屋・募集状況</a></li>
-<li class=""><a class="font-subheading text-headline-lg-mobile text-on-surface-variant block" href="#gallery">ギャラリー</a></li>
 <li class=""><a class="font-subheading text-headline-lg-mobile text-on-surface-variant block" href="#equipment">設備・仕様</a></li>
 <li class=""><a class="font-subheading text-headline-lg-mobile text-on-surface-variant block" href="#access">周辺環境</a></li>
 <li class=""><a class="font-subheading text-headline-lg-mobile text-on-surface-variant block" href="#detail">物件概要</a></li>
@@ -316,23 +325,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <th class="py-4 px-2">専有面積</th>
 <th class="py-4 px-2">賃料 ／ 共益費</th>
 <th class="py-4 px-2">状況</th>
-<th class="py-4 px-2">物件概要</th>
+<th class="py-4 px-2">物件資料</th>
 </tr>
 </thead>
-<tbody class="font-body-md text-primary">
-<script>
-                        const rooms = ['401', '402', '403', '404', '405', '501', '502', '503', '504', '505'];
-                        document.write(rooms.map(room => `
-                            <tr class="border-b border-outline-variant/30">
-                                <td class="py-6 px-2"><button onclick="openInteriorModal('${room}')" class="underline text-primary hover:text-secondary font-medium">${room}</button></td>
-                                <td class="py-6 px-2"><button onclick="openMadoriModal('${room}')" class="underline text-primary hover:text-secondary font-medium">1R</button></td>
-                                <td class="py-6 px-2">12.8㎡</td>
-                                <td class="py-6 px-2">42,000円 / 3,000円</td>
-                                <td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td>
-                                <td class="py-6 px-2"><button onclick="openRoomDetailModal('${room}')" class="bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity">物件概要</button></td>
-                            </tr>
-                        `).join(''));
-                    </script>
+<tbody class="font-body-md text-primary" id="rooms-table-body">
+<!-- JSにて資料に基づく各部屋データを動的出力 -->
 </tbody>
 </table>
 </div>
@@ -346,48 +343,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 </div>
 </section>
 
-<!-- 各種モーダル構造 -->
-<div id="madori-modal" class="fixed inset-0 z-[100] hidden bg-black/60 flex items-center justify-center p-4">
-<div class="bg-white max-w-md w-full relative p-6 rounded shadow-2xl">
-<button onclick="closeModal('madori-modal')" class="absolute top-4 right-4 material-symbols-outlined text-primary text-2xl hover:opacity-75">close</button>
-<h3 class="font-display-lg text-lg text-primary mb-4"><span id="madori-title"></span>号室 間取り図</h3>
-<div class="w-full aspect-square border-2 border-dashed border-outline-variant flex items-center justify-center bg-surface-container-low rounded">
-<p class="text-on-surface-variant text-sm">[ 間取り画像ダミー位置 ]</p>
-</div>
-</div>
-</div>
-
-<div id="interior-modal" class="fixed inset-0 z-[100] hidden bg-black/60 flex items-center justify-center p-4">
-<div class="bg-white max-w-lg w-full relative p-6 rounded shadow-2xl">
-<button onclick="closeModal('interior-modal')" class="absolute top-4 right-4 material-symbols-outlined text-primary text-2xl hover:opacity-75">close</button>
-<h3 class="font-display-lg text-lg text-primary mb-4"><span id="interior-title"></span>号室 内観写真</h3>
-<div class="w-full aspect-video border-2 border-dashed border-outline-variant flex items-center justify-center bg-surface-container-low rounded">
-<p class="text-on-surface-variant text-sm">[ 内観写真ダミー位置 ]</p>
-</div>
-</div>
-</div>
-
-<div id="room-detail-modal" class="fixed inset-0 z-[100] hidden bg-black/60 flex items-center justify-center p-4">
-<div class="bg-white max-w-md w-full relative p-6 rounded shadow-2xl overflow-y-auto max-h-[90vh]">
-<button onclick="closeModal('room-detail-modal')" class="absolute top-4 right-4 material-symbols-outlined text-primary text-2xl hover:opacity-75">close</button>
-<h3 class="font-display-lg text-lg text-primary mb-4"><span id="room-detail-title"></span>号室 詳細概要</h3>
-<table class="w-full text-label-sm text-on-surface-variant border-collapse border border-outline-variant/50">
-<tbody>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal bg-surface-container p-3 w-1/3">賃料</th><td class="p-3">42,000円</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal bg-surface-container p-3">敷金</th><td class="p-3">なし</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal bg-surface-container p-3">管理費等</th><td class="p-3">3,000円</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal bg-surface-container p-3">礼金</th><td class="p-3">なし</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal bg-surface-container p-3">間取り</th><td class="p-3">1R</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal bg-surface-container p-3">階数</th><td class="p-3">5 / 5階</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal bg-surface-container p-3">専有面積</th><td class="p-3">12.8㎡</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal bg-surface-container p-3">開口向き</th><td class="p-3">北西</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal bg-surface-container p-3">入居可能日</th><td class="p-3">2026年07月下旬</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<section class="section-padding" id="gallery">
+<!-- GALLERY (YouTubeエリア - 一時非表示) -->
+<section class="section-padding hidden" id="gallery">
 <div class="max-w-[1200px] mx-auto px-4">
 <div class="text-center mb-16">
 <span class="font-subheading text-label-sm text-secondary tracking-[0.3em]">GALLERY</span>
@@ -398,7 +355,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <div class="text-center p-6">
 <span class="material-symbols-outlined text-5xl text-on-surface-variant/60 mb-2">play_circle</span>
 <p class="text-on-surface-variant text-sm font-subheading">[ YouTube 埋め込み動画ダミー枠 ]</p>
-<p class="text-on-surface-variant/50 text-[11px] mt-1">※実際の埋め込み時はここに &lt;iframe&gt; タグが入ります</p>
 </div>
 </div>
 </div>
@@ -419,12 +375,16 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <div class="bg-white p-4 text-center text-label-sm font-subheading border-t border-outline-variant/20 text-primary">居室</div>
 </div>
 <div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0 flex flex-col">
-<img src="2.png" alt="キッチン" class="w-full flex-1 object-cover">
+<img src="2.png" alt="キッチン" class="w-full flex-1 object-cover object-bottom">
 <div class="bg-white p-4 text-center text-label-sm font-subheading border-t border-outline-variant/20 text-primary">キッチン</div>
 </div>
 <div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0 flex flex-col">
 <img src="3.png" alt="水回り" class="w-full flex-1 object-cover">
 <div class="bg-white p-4 text-center text-label-sm font-subheading border-t border-outline-variant/20 text-primary">水回り</div>
+</div>
+<div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0 flex flex-col">
+<img src="flyer_image.png" alt="物件チラシ" class="w-full flex-1 object-contain bg-white">
+<div class="bg-white p-4 text-center text-label-sm font-subheading border-t border-outline-variant/20 text-primary">物件チラシ</div>
 </div>
 </div>
 
@@ -590,7 +550,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 </div>
 <div class="bg-white/5 border border-white/10 text-center rounded flex flex-col justify-center p-8">
 <p class="text-label-sm text-on-primary/60 mb-4">Webからのお問合せ</p>
-<a class="inline-block bg-secondary-container text-on-secondary-container py-4 px-6 font-subheading text-xs hover:opacity-90 transition-opacity rounded font-bold" href="#">
+<a class="inline-block bg-secondary-container text-on-secondary-container py-4 px-6 font-subheading text-xs hover:opacity-90 transition-opacity rounded font-bold" href="https://forms.gle/cKjbb2fdhN5cqcZG8" target="_blank" rel="noopener noreferrer">
                         Googleフォームで問い合わせる
                     </a>
 </div>
@@ -606,7 +566,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <ul class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-label-sm">
 <li class=""><a class="hover:text-secondary-fixed transition-colors" href="#concept">コンセプト</a></li>
 <li class=""><a class="hover:text-secondary-fixed transition-colors" href="#rooms">お部屋・募集状況</a></li>
-<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#gallery">ギャラリー</a></li>
 <li class=""><a class="hover:text-secondary-fixed transition-colors" href="#equipment">設備・仕様</a></li>
 <li class=""><a class="hover:text-secondary-fixed transition-colors" href="#access">周辺環境</a></li>
 <li class=""><a class="hover:text-secondary-fixed transition-colors" href="#detail">物件概要</a></li>
@@ -624,6 +583,19 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 </footer>
 
 <script>
+        // 資料に基づいた正確な部屋一覧データ[cite: 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        const roomsData = [
+            { room: '401', layout: '1R', area: '12.8㎡', rent: '42,000円 / 3,000円', status: '募集中', pdfPath: './pdf/401.pdf' },[cite: 13]
+            { room: '402', layout: '1R', area: '14.4㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/402.pdf' },[cite: 12]
+            { room: '404', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/404.pdf' },[cite: 11]
+            { room: '405', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/405.pdf' },[cite: 10]
+            { room: '501', layout: '1R', area: '14.4㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/501.pdf' },[cite: 9]
+            { room: '502', layout: '1R', area: '16.6㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/502.pdf' },[cite: 8]
+            { room: '503', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/503.pdf' },[cite: 7]
+            { room: '504', layout: '1R', area: '14.2㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/504.pdf' },[cite: 6]
+            { room: '505', layout: '1R', area: '12.8㎡', rent: '42,000円 / 3,000円', status: '募集中', pdfPath: './pdf/505.pdf' }[cite: 5]
+        ];
+
         const header = document.querySelector('header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -703,25 +675,33 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             }
         }
 
-        // モーダル制御
-        function openMadoriModal(room) {
-            document.getElementById('madori-title').innerText = room;
-            document.getElementById('madori-modal').classList.remove('hidden');
-        }
-        function openInteriorModal(room) {
-            document.getElementById('interior-title').innerText = room;
-            document.getElementById('interior-modal').classList.remove('hidden');
-        }
-        function openRoomDetailModal(room) {
-            document.getElementById('room-detail-title').innerText = room;
-            document.getElementById('room-detail-modal').classList.remove('hidden');
-        }
-        function closeModal(id) {
-            document.getElementById(id).classList.add('hidden');
+        // 部屋テーブル動的描写関数
+        function renderRoomsTable() {
+            const tbody = document.getElementById('rooms-table-body');
+            if (!tbody) return;
+
+            tbody.innerHTML = roomsData.map(item => `
+                <tr class="border-b border-outline-variant/30">
+                    <td class="py-6 px-2 font-medium">${item.room}号室</td>
+                    <td class="py-6 px-2 font-medium">${item.layout}</td>
+                    <td class="py-6 px-2">${item.area}</td>
+                    <td class="py-6 px-2">${item.rent}</td>
+                    <td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">${item.status}</span></td>
+                    <td class="py-6 px-2">
+                        <a href="${item.pdfPath}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity">
+                            <span class="material-symbols-outlined text-sm">description</span>
+                            <span>物件資料</span>
+                        </a>
+                    </td>
+                </tr>
+            `).join('');
         }
 
         // DOMロード後の処理
         document.addEventListener('DOMContentLoaded', () => {
+            // 部屋一覧テーブル描画
+            renderRoomsTable();
+
             // モバイルメニュー内のリンクをクリックした際にドロワーを閉じる処理
             const mobileLinks = document.querySelectorAll('#mobile-drawer a');
             mobileLinks.forEach(link => {
