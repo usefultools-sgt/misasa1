@@ -12,8 +12,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>LIFE PLUS | ていねいな日常を、ちょうどいい暮らしへ。</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Montserrat:wght@400;500&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Montserrat:wght@400;500&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
 <!-- TikTok Pixel Code Start -->
 <script>
@@ -227,16 +227,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- メインビジュアル -->
 <section class="relative h-[884px] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0" id="hero-slider">
-<img src="1.png" alt="メインビジュアル1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
-<img src="2.png" alt="メインビジュアル2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
-<img src="3.png" alt="メインビジュアル3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
-<img src="4.png" alt="ステージングお部屋イメージ" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+<img src="./新しいフォルダー/1.jpg" alt="メインビジュアル1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+<img src="./新しいフォルダー/2.jpg" alt="メインビジュアル2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+<img src="./新しいフォルダー/3.jpg" alt="メインビジュアル3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+<img src="./新しいフォルダー/4.jpg" alt="ステージングお部屋イメージ" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
 <div class="absolute inset-0 image-overlay"></div>
 </div>
 <div class="relative z-10 text-center px-4 max-w-4xl">
 <p class="font-subheading text-label-sm text-white/80 tracking-widest mb-6">LIFE PLUS RENTAL RESIDENCE</p>
 <h1 class="font-display-lg text-4xl md:text-6xl text-white leading-tight mb-8">ていねいな日常を、<br>ちょうどいい暮らしへ。</h1>
-<p class="font-display-lg text-white/90 text-lg md:text-xl mb-12">LIFE PLUS MISASA Ⅰ ／ 全20戸</p>
+<p class="font-display-lg text-white/90 text-lg md:text-xl mb-12">LIFE PLUS MISASA Ⅰ・Ⅱ ／ 全37戸</p>
 <div class="flex flex-col md:flex-row gap-4 justify-center">
 <a class="bg-secondary-container text-on-secondary-container px-10 py-4 font-subheading text-sm hover:opacity-90 transition-opacity" href="#contact">問い合わせをする</a>
 </div>
@@ -263,7 +263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         デザイン性・機能性も向上させながら、再生。<br>
                         日常の動線、光、風までを丁寧に設計した住まいで、<br>
                         身軽な暮らしを、長く心地よく。<br>
-<span class="block text-center mt-4 text-primary tracking-wider">26年8月、いよいよ賃貸入居者募集開始。</span>
+<span class="block text-center mt-4 text-primary tracking-wider font-bold">国道183号線を挟んで西側にライフプラス三篠、東側にライフプラス三篠Ⅱ。<br>三篠エリアを彩る、2つのリノベーション賃貸プロジェクトが始動。<br>26年8月、いよいよ賃貸入居者募集開始。</span>
 </p>
 </div>
 </div>
@@ -310,6 +310,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p class="text-on-surface-variant text-label-sm mt-4">最新の募集状況をご案内します。<br>ご希望のお部屋はお早めにお問合せください。</p>
 </div>
 
+<!-- 物件切り替えタブ -->
+<div class="flex justify-center gap-4 mb-8">
+  <button id="tab-misasa1" onclick="switchBuilding('misasa1')" class="px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-primary text-on-primary transition-all shadow-md">
+    ライフプラス三篠 Ⅰ
+  </button>
+  <button id="tab-misasa2" onclick="switchBuilding('misasa2')" class="px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-white text-primary hover:bg-surface-container transition-all shadow-sm">
+    ライフプラス三篠 Ⅱ
+  </button>
+</div>
+
 <div class="text-center mb-4">
 <button onclick="toggleRoomsAccordion()" id="accordion-toggle-btn" class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-3.5 font-subheading text-xs uppercase tracking-wider hover:bg-primary-container transition-all rounded shadow-sm">
 <span>募集中の部屋一覧を見る</span>
@@ -318,29 +328,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <div id="rooms-accordion" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-<div class="overflow-x-auto no-scrollbar bg-white/50 p-4 rounded border border-outline-variant/30">
+<div class="overflow-x-auto no-scrollbar bg-white/80 p-4 rounded border border-outline-variant/30">
 <table class="w-full border-collapse">
 <thead>
 <tr class="border-b border-primary/20 text-label-sm font-subheading text-on-surface-variant text-left">
-<th class="py-4 px-2">号室</th>
-<th class="py-4 px-2">間取り</th>
-<th class="py-4 px-2">専有面積</th>
-<th class="py-4 px-2">賃料 ／ 共益費</th>
-<th class="py-4 px-2">状況</th>
-<th class="py-4 px-2">物件資料</th>
+<th class="py-4 px-2 whitespace-nowrap">号室</th>
+<th class="py-4 px-2 whitespace-nowrap">間取り</th>
+<th class="py-4 px-2 whitespace-nowrap">専有面積</th>
+<th class="py-4 px-2 whitespace-nowrap">賃料 ／ 共益費</th>
+<th class="py-4 px-2 whitespace-nowrap">状況</th>
+<th class="py-4 px-2 whitespace-nowrap">物件資料</th>
 </tr>
 </thead>
 <tbody class="font-body-md text-primary" id="rooms-table-body">
-<!-- 初期表示データ（JS非作動時対策兼アコーディオン高さ確保） -->
-<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">401号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">12.8㎡</td><td class="py-6 px-2">42,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/401.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
-<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">402号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">14.4㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/402.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
-<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">404号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">13.7㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/404.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
-<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">405号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">13.7㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/405.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
-<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">501号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">14.4㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/501.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
-<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">502号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">16.6㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/502.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
-<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">503号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">13.7㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/503.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
-<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">504号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">14.2㎡</td><td class="py-6 px-2">45,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/504.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
-<tr class="border-b border-outline-variant/30"><td class="py-6 px-2 font-medium">505号室</td><td class="py-6 px-2 font-medium">1R</td><td class="py-6 px-2">12.8㎡</td><td class="py-6 px-2">42,000円 / 3,000円</td><td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">募集中</span></td><td class="py-6 px-2"><a href="./pdf/505.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-sm">description</span><span>物件資料</span></a></td></tr>
+<!-- JSで動的生成 -->
 </tbody>
 </table>
 </div>
@@ -350,23 +351,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="flex items-center gap-2"><span class="w-12 h-6 bg-secondary-container border border-secondary flex items-center justify-center text-on-secondary-container">募集中</span> ご入居お申込み可能</div>
 <div class="flex items-center gap-2"><span class="w-12 h-6 bg-on-secondary-container/10 flex items-center justify-center">申込み済</span> 現在ご相談中</div>
 <div class="flex items-center gap-2"><span class="w-12 h-6 bg-surface-dim flex items-center justify-center">入居中</span> ご入居中</div>
-</div>
-</div>
-</section>
-
-<!-- GALLERY (YouTubeエリア - 一時非表示) -->
-<section class="section-padding hidden" id="gallery">
-<div class="max-w-[1200px] mx-auto px-4">
-<div class="text-center mb-16">
-<span class="font-subheading text-label-sm text-secondary tracking-[0.3em]">GALLERY</span>
-<h2 class="font-display-lg text-headline-lg text-primary mt-4">外観・室内ギャラリー</h2>
-<p class="text-on-surface-variant text-label-sm mt-4">建物の佇まいから、室内・水回りの細部まで。</p>
-</div>
-<div class="max-w-3xl mx-auto aspect-video bg-surface-container border border-outline-variant/40 relative rounded overflow-hidden shadow-sm flex items-center justify-center">
-<div class="text-center p-6">
-<span class="material-symbols-outlined text-5xl text-on-surface-variant/60 mb-2">play_circle</span>
-<p class="text-on-surface-variant text-sm font-subheading">[ YouTube 埋め込み動画ダミー枠 ]</p>
-</div>
 </div>
 </div>
 </section>
@@ -382,13 +366,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="max-w-2xl mx-auto relative mb-6 group px-4 md:px-0">
 <div class="relative aspect-video overflow-hidden rounded border border-outline-variant/30 bg-white shadow-sm">
 <div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-100 z-10">
-<img src="1.png" alt="居室" class="w-full h-full object-cover">
+<img src="./新しいフォルダー/1.jpg" alt="居室" class="w-full h-full object-cover">
 </div>
 <div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
-<img src="2.png" alt="キッチン" class="w-full h-full object-cover object-bottom">
+<img src="./新しいフォルダー/2.jpg" alt="キッチン" class="w-full h-full object-cover object-bottom">
 </div>
 <div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
-<img src="3.png" alt="水回り" class="w-full h-full object-cover">
+<img src="./新しいフォルダー/3.jpg" alt="水回り" class="w-full h-full object-cover">
 </div>
 <div class="equipment-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
 <img src="flyer_image.png" alt="物件チラシ" class="w-full h-full object-contain bg-white">
@@ -444,57 +428,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="section-padding" id="access">
 <div class="max-w-[1200px] mx-auto px-4">
-<div class="text-center mb-16">
+<div class="text-center mb-8">
 <span class="font-subheading text-label-sm text-secondary tracking-[0.3em]">AREA</span>
 <h2 class="font-display-lg text-headline-lg text-primary mt-4">周辺環境・アクセス</h2>
 <p class="text-on-surface-variant text-label-sm mt-4">日々の暮らしを支える施設が、徒歩・自転車圏内に揃います。</p>
 </div>
+
+<!-- アクセス切り替えタブ -->
+<div class="flex justify-center gap-4 mb-8">
+  <button id="access-tab-misasa1" onclick="switchAccessBuilding('misasa1')" class="px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-primary text-on-primary transition-all shadow-md">
+    ライフプラス三篠 Ⅰ
+  </button>
+  <button id="access-tab-misasa2" onclick="switchAccessBuilding('misasa2')" class="px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-white text-primary hover:bg-surface-container transition-all shadow-sm">
+    ライフプラス三篠 Ⅱ
+  </button>
+</div>
+
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-<div class="space-y-8">
-<div>
-<h4 class="font-subheading text-xs text-secondary mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">shopping_basket</span> 商業
-                        </h4>
-<ul class="space-y-2 text-on-surface-variant text-label-sm">
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>セブンイレブン広島三篠2丁目店</span><span>30m 徒歩1分</span></li>
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>ほっかほっか亭 三篠店</span><span>73m 徒歩1分</span></li>
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>フレスタカジル横川店</span><span>770m 徒歩10分</span></li>
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>フジ三篠店</span><span>504m 徒歩7分</span></li>
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>ペリ乾ランド三篠町店</span><span>119m 徒歩2分</span></li>
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>ウォンツ三篠店</span><span>673m 徒歩9分</span></li>
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>ウォンツ横川店</span><span>511m 徒歩7分</span></li>
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>マツモトキヨシ横川駅前店</span><span>558m 徒歩7分</span></li>
-</ul>
+<div class="space-y-8" id="access-info-container">
+<!-- JSで動的生成 -->
 </div>
-<div>
-<h4 class="font-subheading text-xs text-secondary mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">mail</span> 金融・郵便
-                        </h4>
-<ul class="space-y-2 text-on-surface-variant text-label-sm">
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>広島三篠郵便局</span><span>85m 徒歩2分</span></li>
-</ul>
-</div>
-<div>
-<h4 class="font-subheading text-xs text-secondary mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">directions_subway</span> 交通
-                        </h4>
-<ul class="space-y-2 text-on-surface-variant text-label-sm">
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>JR横川駅</span><span>573m 徒歩8分</span></li>
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>三篠町三丁目バス停</span><span>286m 徒歩4分</span></li>
-</ul>
-</div>
-<div>
-<h4 class="font-subheading text-xs text-secondary mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">local_hospital</span> 医療
-                        </h4>
-<ul class="space-y-2 text-on-surface-variant text-label-sm">
-<li class="flex justify-between border-b border-outline-variant/30 pb-2"><span>ゆうひ内科循環器クリニック</span><span>170m 徒歩3分</span></li>
-</ul>
-</div>
-<p class="text-[11px] text-on-surface-variant mt-4">※徒歩分数は施設までの概測距離をもとに 80m/分で計算し、端数は繰り上げております。</p>
-</div>
-<div class="relative w-full aspect-square border border-outline-variant overflow-hidden rounded">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204.6474492242023!2d132.45252600007308!3d34.413990846217125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355a989629350315%3A0xfa503cdc5894e3ad!2z44CSNzMzLTAwMDMg5bqD5bO255yM5bqD5bO25biC6KW_5Yy65LiJ56-g55S677yS5LiB55uu77yX4oiS77yTIOWOn-eUsOODk-ODqw!5e1!3m2!1sja!2sjp!4v1784558660255!5m2!1sja!2sjp" style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<div class="relative w-full aspect-square border border-outline-variant overflow-hidden rounded shadow-sm">
+<iframe id="access-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204.6474492242023!2d132.45252600007308!3d34.413990846217125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355a989629350315%3A0xfa503cdc5894e3ad!2z44CSNzMzLTAwMDMg5bqD5bO255yM5bqD5bO25biC6KW_5Yy65LiJ56-g55S677yS5LiB55uu77yX4oiS77yTIOWOn-eUsOODk-ODqw!5e1!3m2!1sja!2sjp!4v1784558660255!5m2!1sja!2sjp" style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 </div>
 </div>
 </div>
@@ -506,20 +461,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <span class="font-subheading text-label-sm text-secondary tracking-[0.3em]">DETAIL</span>
 <h2 class="font-display-lg text-headline-lg text-primary mt-4">物件概要</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-<div>
-<table class="w-full text-label-sm text-on-surface-variant">
-<tbody>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal py-4 w-1/3">住所</th><td class="py-4">広島県広島市西区三篠町2丁目7-3</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal py-4">最寄 駅・バス停</th><td class="py-4">山陽本線 横川 徒歩 9分<br>広島電鉄横川線 横川駅 徒歩 8分<br>可部線 三滝 徒歩 11分</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal py-4">敷金</th><td class="py-4">なし</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal py-4">管理費等</th><td class="py-4">3,000円</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal py-4">礼金</th><td class="py-4">なし</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal py-4">間取り</th><td class="py-4">1R</td></tr>
-<tr class="border-b border-outline-variant/50"><th class="text-left font-normal py-4">築年月</th><td class="py-4">1985年5月</td></tr>
-</tbody>
-</table>
+
+<!-- 2物件並記 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+  <!-- 三篠Ⅰ -->
+  <div class="bg-white p-6 rounded border border-outline-variant shadow-sm hover:border-secondary transition-colors">
+    <h3 class="font-display-lg text-xl text-primary border-b border-primary/20 pb-3 mb-4">ライフプラス三篠 Ⅰ</h3>
+    <table class="w-full text-label-sm text-on-surface-variant">
+      <tbody>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 w-1/3 font-normal">所在地</th><td class="py-3">広島県広島市西区三篠町2丁目7-3</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">最寄駅</th><td class="py-3">山陽本線 横川 徒歩 9分<br>広島電鉄横川線 横川駅 徒歩 8分<br>可部線 三滝 徒歩 11分</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">築年月</th><td class="py-3">1985年5月</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">構造/総戸数</th><td class="py-3">RC造 5階建 / 全20戸</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">間取り</th><td class="py-3">1R</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">敷金 / 礼金</th><td class="py-3">なし / なし</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">管理費等</th><td class="py-3">3,000円</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 三篠Ⅱ -->
+  <div class="bg-white p-6 rounded border border-outline-variant shadow-sm hover:border-secondary transition-colors">
+    <h3 class="font-display-lg text-xl text-primary border-b border-primary/20 pb-3 mb-4">ライフプラス三篠 Ⅱ</h3>
+    <table class="w-full text-label-sm text-on-surface-variant">
+      <tbody>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 w-1/3 font-normal">所在地</th><td class="py-3">広島県広島市西区三篠町2丁目17-8</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">最寄駅</th><td class="py-3">山陽本線 横川 徒歩 9分<br>広島電鉄横川線 横川駅 徒歩 8分<br>広島電鉄横川線 横川一丁目 徒歩 12分</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">築年月</th><td class="py-3">1989年6月</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">構造/総戸数</th><td class="py-3">RC造 5階建 / 全17戸</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">間取り</th><td class="py-3">1R</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">敷金 / 礼金</th><td class="py-3">なし / なし</td></tr>
+        <tr class="border-b border-outline-variant/30"><th class="text-left py-3 font-normal">管理費等</th><td class="py-3">3,000円</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
+
 <div class="bg-white p-8 md:p-12 shadow-sm border border-outline-variant">
 <span class="font-subheading text-[10px] text-secondary tracking-widest block mb-4">COMPANY</span>
 <h3 class="font-display-lg text-2xl text-primary mb-4">会社概要</h3>
@@ -539,7 +516,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </table>
 </div>
 </div>
-</div>
 </section>
 
 <!-- お問合せ（フッターCVエリア） -->
@@ -550,7 +526,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="text-center mb-10">
 <button onclick="openCampaignModal()" class="inline-flex items-center gap-3 bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-subheading text-xs md:text-sm font-bold py-4 px-8 rounded-full shadow-2xl transition-all transform hover:scale-105 border-2 border-secondary animate-pulse">
 <span class="material-symbols-outlined text-xl">campaign</span>
-<span>【期間限定】初期費用０円キャンペーン実施中！詳しくはこちら</span>
+<span>初期費用０円キャンペーン実施中！詳しくはこちら</span>
 <span class="material-symbols-outlined text-base">chevron_right</span>
 </button>
 </div>
@@ -618,7 +594,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
       <!-- フォールバック（画像読み込み失敗時のHTMLデザインバナー） -->
 <div id="html-banner-fallback" style="display:none;" class="bg-gradient-to-r from-primary-container via-primary to-tertiary p-6 text-white text-center relative overflow-hidden">
-<span class="bg-secondary-container text-on-secondary-container text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-2">期間限定キャンペーン</span>
+<span class="bg-secondary-container text-on-secondary-container text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-2">キャンペーン</span>
 <h3 class="font-display-lg text-2xl md:text-3xl text-secondary-fixed font-bold leading-tight">初期費用 0円！</h3>
 <p class="text-xs md:text-sm text-white/90 mt-1 font-subheading">新生活のお引越し費用を大幅削減</p>
 </div>
@@ -643,10 +619,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="bg-surface-container p-3 rounded-lg border border-outline-variant/40 flex items-center gap-2 shadow-sm">
 <span class="material-symbols-outlined text-secondary text-base">check_circle</span> 初回火災保険料 0円
         </div>
+<div class="bg-surface-container p-3 rounded-lg border border-outline-variant/40 flex items-center gap-2 shadow-sm col-span-2 justify-center">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span> 仲介手数料 0円
+        </div>
 </div>
 
 <div class="text-[11px] text-on-surface-variant text-center bg-secondary-container/20 p-2.5 rounded-lg border border-secondary/30 font-bold">
-        ※キャンペーン適用期間：～26年10月末までにライフプラス三篠・ライフプラス三篠Ⅱのお部屋をご契約いただいた方
+        ※キャンペーン適用期間：ライフプラス三篠・ライフプラス三篠Ⅱのお部屋をご契約いただいた方
+      </div>
+
+<div class="text-[10px] text-on-surface-variant text-left mt-2 space-y-1">
+        <p>※退去時にはハウスクリーニング費（エアコンクリーニング費含む）55,000円（税込）を一律請求いたします。</p>
+        <p>※退去時お部屋の状態が著しく悪化しており、原状回復に相当な費用が掛かると判断した場合には別途原状回復費用をご請求いたします。</p>
       </div>
 
 <!-- ポップアップバナー下部の内見を促すCVボタン（Googleフォームへ遷移） -->
@@ -661,18 +645,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script>
-        // 各部屋データ配列（動的描写用）
-        const roomsData = [
-            { room: '401', layout: '1R', area: '12.8㎡', rent: '42,000円 / 3,000円', status: '募集中', pdfPath: './pdf/401.pdf' },
-            { room: '402', layout: '1R', area: '14.4㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/402.pdf' },
-            { room: '404', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/404.pdf' },
-            { room: '405', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/405.pdf' },
-            { room: '501', layout: '1R', area: '14.4㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/501.pdf' },
-            { room: '502', layout: '1R', area: '16.6㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/502.pdf' },
-            { room: '503', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/503.pdf' },
-            { room: '504', layout: '1R', area: '14.2㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/504.pdf' },
-            { room: '505', layout: '1R', area: '12.8㎡', rent: '42,000円 / 3,000円', status: '募集中', pdfPath: './pdf/505.pdf' }
-        ];
+        // 物件ごとの部屋データ配列
+        const roomsDataMap = {
+            misasa1: [
+                { room: '401', layout: '1R', area: '12.8㎡', rent: '42,000円 / 3,000円', status: '募集中', pdfPath: './pdf/401.pdf' },
+                { room: '402', layout: '1R', area: '14.4㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/402.pdf' },
+                { room: '404', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/404.pdf' },
+                { room: '405', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/405.pdf' },
+                { room: '501', layout: '1R', area: '14.4㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/501.pdf' },
+                { room: '502', layout: '1R', area: '16.6㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/502.pdf' },
+                { room: '503', layout: '1R', area: '13.7㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/503.pdf' },
+                { room: '504', layout: '1R', area: '14.2㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './pdf/504.pdf' },
+                { room: '505', layout: '1R', area: '12.8㎡', rent: '42,000円 / 3,000円', status: '募集中', pdfPath: './pdf/505.pdf' }
+            ],
+            misasa2: [
+                { room: '401', layout: '1R', area: '14.08㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './三篠Ⅱpdf/401.pdf' },
+                { room: '402', layout: '1R', area: '14.08㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './三篠Ⅱpdf/402.pdf' },
+                { room: '404', layout: '1R', area: '14.08㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './三篠Ⅱpdf/404.pdf' },
+                { room: '501', layout: '1R', area: '14.08㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './三篠Ⅱpdf/501.pdf' },
+                { room: '503', layout: '1R', area: '14.08㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './三篠Ⅱpdf/503.pdf' },
+                { room: '504', layout: '1R', area: '14.08㎡', rent: '45,000円 / 3,000円', status: '募集中', pdfPath: './三篠Ⅱpdf/504.pdf' }
+            ]
+        };
+
+        // 周辺環境データマップ
+        const accessDataMap = {
+            misasa1: {
+                mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204.6474492242023!2d132.45252600007308!3d34.413990846217125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355a989629350315%3A0xfa503cdc5894e3ad!2z44CSNzMzLTAwMDMg5bqD5bO255yM5bqD5bO25biC6KW_5Yy65LiJ56-g55S677yS5LiB55uu77yX4oiS77yTIOWOn-eUsOODk-ODqw!5e1!3m2!1sja!2sjp!4v1784558660255!5m2!1sja!2sjp",
+                shopping: [
+                    { name: "セブンイレブン広島三篠2丁目店", detail: "30m 徒歩1分" },
+                    { name: "ほっかほっか亭 三篠店", detail: "73m 徒歩1分" },
+                    { name: "フレスタカジル横川店", detail: "770m 徒歩10分" },
+                    { name: "フジ三篠店", detail: "504m 徒歩7分" },
+                    { name: "ペリ乾ランド三篠町店", detail: "119m 徒歩2分" },
+                    { name: "ウォンツ三篠店", detail: "673m 徒歩9分" },
+                    { name: "ウォンツ横川店", detail: "511m 徒歩7分" },
+                    { name: "マツモトキヨシ横川駅前店", detail: "558m 徒歩7分" }
+                ],
+                finance: [
+                    { name: "広島三篠郵便局", detail: "85m 徒歩2分" }
+                ],
+                transit: [
+                    { name: "JR横川駅", detail: "573m 徒歩8分" },
+                    { name: "三篠町三丁目バス停", detail: "286m 徒歩4分" }
+                ],
+                medical: [
+                    { name: "ゆうひ内科循環器クリニック", detail: "170m 徒歩3分" }
+                ]
+            },
+            misasa2: {
+                mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229.02849360658294!2d132.45421152599212!3d34.411983248531214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355a98bd115817b9%3A0xff0ccbd3881f9698!2z44CSNzMzLTAwMDMg5bqD5bO255yM5bqD5bO25biC6KW_5Yy65LiJ56-g55S677yS5LiB55uu77yR77yXIOesrOS6jOWOn-eUsOODk-ODqw!5e1!3m2!1sja!2sjp!4v1787386247929!5m2!1sja!2sjp",
+                shopping: [
+                    { name: "セブンイレブン広島三篠1丁目店", detail: "155m 徒歩2分" },
+                    { name: "フジ三篠店", detail: "159m 徒歩2分" },
+                    { name: "フレスタカジル横川店", detail: "780m 徒歩10分" },
+                    { name: "コインランドリーエイト", detail: "230m 徒歩3分" },
+                    { name: "小柴クリーニング フジ三篠店", detail: "190m 徒歩3分" },
+                    { name: "ウォンツ横川店", detail: "600m 徒歩8分" },
+                    { name: "マツモトキヨシ横川駅前店", detail: "600m 徒歩8分" }
+                ],
+                finance: [
+                    { name: "広島楠木郵便局", detail: "370m 徒歩5分" }
+                ],
+                transit: [
+                    { name: "JR横川駅", detail: "500m 徒歩7分" }
+                ],
+                medical: [
+                    { name: "小田内科", detail: "30m 徒歩1分" }
+                ]
+            }
+        };
+
+        let currentBuilding = 'misasa1';
 
         const header = document.querySelector('header');
         window.addEventListener('scroll', () => {
@@ -691,7 +735,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             document.getElementById('mobile-drawer').classList.add('translate-x-full');
         }
 
-        // メインビジュアル自動スライドショー (4枚ローテーション)
+        // メインビジュアル自動スライドショー
         const slides = document.querySelectorAll('#hero-slider img');
         let currentSlide = 0;
         function nextSlide() {
@@ -775,18 +819,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         // 部屋テーブル動的描写関数
-        function renderRoomsTable() {
+        function renderRoomsTable(buildingKey) {
             const tbody = document.getElementById('rooms-table-body');
             if (!tbody) return;
 
-            tbody.innerHTML = roomsData.map(item => `
+            const list = roomsDataMap[buildingKey] || [];
+            tbody.innerHTML = list.map(item => `
                 <tr class="border-b border-outline-variant/30">
-                    <td class="py-6 px-2 font-medium">${item.room}号室</td>
-                    <td class="py-6 px-2 font-medium">${item.layout}</td>
-                    <td class="py-6 px-2">${item.area}</td>
-                    <td class="py-6 px-2">${item.rent}</td>
-                    <td class="py-6 px-2"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">${item.status}</span></td>
-                    <td class="py-6 px-2">
+                    <td class="py-6 px-2 font-medium whitespace-nowrap">${item.room}号室</td>
+                    <td class="py-6 px-2 font-medium whitespace-nowrap">${item.layout}</td>
+                    <td class="py-6 px-2 whitespace-nowrap">${item.area}</td>
+                    <td class="py-6 px-2 whitespace-nowrap">${item.rent}</td>
+                    <td class="py-6 px-2 whitespace-nowrap"><span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] border border-secondary rounded">${item.status}</span></td>
+                    <td class="py-6 px-2 whitespace-nowrap">
                         <a href="${item.pdfPath}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 bg-primary text-on-primary text-xs px-3 py-1.5 rounded hover:opacity-90 transition-opacity">
                             <span class="material-symbols-outlined text-sm">description</span>
                             <span>物件資料</span>
@@ -794,12 +839,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </td>
                 </tr>
             `).join('');
+
+            // アコーディオンが開いている場合、高さを再調整
+            const accordion = document.getElementById('rooms-accordion');
+            if (accordion.style.maxHeight && accordion.style.maxHeight !== '0px') {
+                accordion.style.maxHeight = accordion.scrollHeight + 'px';
+            }
+        }
+
+        // 建物切り替え関数 (ROOMS)
+        function switchBuilding(buildingKey) {
+            currentBuilding = buildingKey;
+            const btn1 = document.getElementById('tab-misasa1');
+            const btn2 = document.getElementById('tab-misasa2');
+
+            if (buildingKey === 'misasa1') {
+                btn1.className = "px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-primary text-on-primary transition-all shadow-md";
+                btn2.className = "px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-white text-primary hover:bg-surface-container transition-all shadow-sm";
+            } else {
+                btn2.className = "px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-primary text-on-primary transition-all shadow-md";
+                btn1.className = "px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-white text-primary hover:bg-surface-container transition-all shadow-sm";
+            }
+            renderRoomsTable(buildingKey);
+        }
+
+        // 周辺環境描写関数
+        function renderAccessInfo(buildingKey) {
+            const container = document.getElementById('access-info-container');
+            const iframe = document.getElementById('access-map-iframe');
+            if (!container || !iframe) return;
+
+            const data = accessDataMap[buildingKey];
+            if (!data) return;
+
+            iframe.src = data.mapSrc;
+
+            const renderCategory = (title, icon, items) => {
+                if (!items || items.length === 0) return '';
+                const rows = items.map(item => `
+                    <li class="flex justify-between border-b border-outline-variant/30 pb-2">
+                        <span>${item.name}</span>
+                        <span>${item.detail}</span>
+                    </li>
+                `).join('');
+
+                return `
+                    <div>
+                        <h4 class="font-subheading text-xs text-secondary mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">${icon}</span> ${title}
+                        </h4>
+                        <ul class="space-y-2 text-on-surface-variant text-label-sm">
+                            ${rows}
+                        </ul>
+                    </div>
+                `;
+            };
+
+            container.innerHTML = `
+                ${renderCategory('商業', 'shopping_basket', data.shopping)}
+                ${renderCategory('金融・郵便', 'mail', data.finance)}
+                ${renderCategory('交通', 'directions_subway', data.transit)}
+                ${renderCategory('医療', 'local_hospital', data.medical)}
+                <p class="text-[11px] text-on-surface-variant mt-4">※徒歩分数は施設までの概測距離をもとに 80m/分で計算し、端数は繰り上げております。</p>
+            `;
+        }
+
+        // 建物切り替え関数 (ACCESS)
+        function switchAccessBuilding(buildingKey) {
+            const btn1 = document.getElementById('access-tab-misasa1');
+            const btn2 = document.getElementById('access-tab-misasa2');
+
+            if (buildingKey === 'misasa1') {
+                btn1.className = "px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-primary text-on-primary transition-all shadow-md";
+                btn2.className = "px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-white text-primary hover:bg-surface-container transition-all shadow-sm";
+            } else {
+                btn2.className = "px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-primary text-on-primary transition-all shadow-md";
+                btn1.className = "px-6 py-3 font-subheading text-xs font-bold rounded-lg border border-primary bg-white text-primary hover:bg-surface-container transition-all shadow-sm";
+            }
+            renderAccessInfo(buildingKey);
         }
 
         // DOMロード後の処理
         document.addEventListener('DOMContentLoaded', () => {
-            // 部屋一覧テーブル描画
-            renderRoomsTable();
+            // 初期状態は三篠Ⅰを表示
+            renderRoomsTable('misasa1');
+            renderAccessInfo('misasa1');
 
             // モバイルメニュー内のリンクをクリックした際にドロワーを閉じる処理
             const mobileLinks = document.querySelectorAll('#mobile-drawer a');
